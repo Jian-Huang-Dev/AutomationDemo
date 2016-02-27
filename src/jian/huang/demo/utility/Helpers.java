@@ -64,7 +64,7 @@ public class Helpers {
     }
     
     public static void updateReportWithException(Exception e) {
-        appendText("Element is not found with exception:" + e);
+        appendText("Element is not found with exception:\n" + e);
     }
 
 	/**

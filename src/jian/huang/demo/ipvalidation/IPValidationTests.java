@@ -41,55 +41,7 @@ public class IPValidationTests {
 
 			Helpers.updateReportForNegativeTests(isIPValid, IPAddr);
 		}
-
-//		// test valid IPv6 addresses
-//		for (int i = 0; i < TestData.valid_ipv6_test_data.length; i++) {
-//
-//			ip_addr = TestData.valid_ipv6_test_data[i];
-//
-//			// ip validation
-//			is_ip_valid = IPValidation.ValidateIPAddr(ip_addr);
-//
-//			// update report file
-//			if (is_ip_valid) {
-//				Helper.appendText(Constant.TEST_PASSED + " \"" + ip_addr + "\""
-//						+ " should be a " + Constant.VALID_IP);
-//			} else {
-//				Helper.appendText(Constant.TEST_FAILED + " \"" + ip_addr + "\""
-//						+ " should be a " + Constant.INVALID_IP);
-//
-//				// record total failed tests
-//				totalFailedTests++;
-//			}
-//
-//			// record total tests
-//			totalTests++;
-//		}
-//
-//		// test invalid Ipv6 addresses
-//		for (int i = 0; i < TestData.invalid_ipv6_test_data.length; i++) {
-//
-//			ip_addr = TestData.invalid_ipv6_test_data[i];
-//
-//			// ip validation
-//			is_ip_valid = IPValidation.ValidateIPAddr(ip_addr);
-//
-//			// update report file
-//			if (!is_ip_valid) {
-//				Helper.appendText(Constant.TEST_PASSED + " \"" + ip_addr + "\""
-//						+ " should be an " + Constant.VALID_IP);
-//			} else {
-//				Helper.appendText(Constant.TEST_FAILED + " \"" + ip_addr + "\""
-//						+ " should be an " + Constant.INVALID_IP);
-//
-//				// record total failed tests
-//				totalFailedTests++;
-//			}
-//
-//			// record total tests
-//			totalTests++;
-//		}
-
+		
 		// Test summary
 		Helpers.appendText("* Total Tests: " + Helpers.totalTests
 				+ ", * Total Failed Tests: " + Helpers.totalFailedTests);
