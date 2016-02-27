@@ -1,0 +1,80 @@
+
+2016/02/26 19:19:16 --> *** TEST STARTS ***
+
+2016/02/26 19:19:20 --> PASSED "192.168.1.2" should be a VALID IP Address
+
+2016/02/26 19:19:23 --> PASSED "0.0.0.0" should be a VALID IP Address
+
+2016/02/26 19:19:25 --> PASSED "255.255.255.255" should be a VALID IP Address
+
+2016/02/26 19:19:28 --> PASSED "266.233.156.255" should be an INVALID IP Address
+
+2016/02/26 19:19:31 --> PASSED "125.15.15.0 0" should be an INVALID IP Address
+
+2016/02/26 19:19:33 --> PASSED "125.15.15.00.78" should be an INVALID IP Address
+
+2016/02/26 19:19:36 --> PASSED "231.123.154" should be an INVALID IP Address
+
+2016/02/26 19:19:39 --> PASSED "123.167" should be an INVALID IP Address
+
+2016/02/26 19:19:41 --> FAILED "2" should be an INVALID IP Address
+
+2016/02/26 19:19:44 --> FAILED "12" should be an INVALID IP Address
+
+2016/02/26 19:19:47 --> FAILED "126" should be an INVALID IP Address
+
+2016/02/26 19:19:49 --> FAILED "1265" should be an INVALID IP Address
+
+2016/02/26 19:19:52 --> PASSED "fe80:aa67:fcd6:aa23:b4b2:a8ff:fee6:ffa7" should be a VALID IP Address
+
+2016/02/26 19:19:55 --> PASSED "Fe99::9" should be a VALID IP Address
+
+2016/02/26 19:19:57 --> PASSED "::" should be a VALID IP Address
+
+2016/02/26 19:20:00 --> PASSED "fe80:aa67:fcd6:aa23:b4b2:a8ff:fee6:ffa70" should be an INVALID IP Address
+
+2016/02/26 19:20:03 --> PASSED "fe80:aa67:fcd6:aa23:b4b2:a8ff:fee6:ff a7" should be an INVALID IP Address
+
+2016/02/26 19:20:06 --> FAILED "aa67:d6:a25:b462:aeff:feb6:fffa" should be an INVALID IP Address
+
+2016/02/26 19:20:08 --> FAILED "fe80:aa67:fcd6:aa23:b4b2:a8ff:fee6:ffa7:dd3" should be an INVALID IP Address
+
+2016/02/26 19:20:11 --> FAILED "a" should be an INVALID IP Address
+
+2016/02/26 19:20:14 --> FAILED "1A" should be an INVALID IP Address
+
+2016/02/26 19:20:17 --> FAILED "16B" should be an INVALID IP Address
+
+2016/02/26 19:20:20 --> FAILED "165a" should be an INVALID IP Address
+
+2016/02/26 19:20:23 --> FAILED "fe80:aa67:fcd6:aa23:b4b2:a8ff:fee6::ffa7" should be an INVALID IP Address
+
+2016/02/26 19:20:26 --> PASSED "fe80:aa67::aa23:b4b2::fee6:ffa7" should be an INVALID IP Address
+
+2016/02/26 19:20:29 --> PASSED "we9:aa67:fcd6:aa23:b4b2:a8ff:fee6:Fa7" should be an INVALID IP Address
+
+2016/02/26 19:20:29 --> * Total Tests: 26, * Total Failed Tests: 11
+
+2016/02/26 19:20:29 --> Test ends at: 2016/02/26 19:20:29 --> Time Duration: 73 s
+
+2016/02/26 19:33:02 --> *** TEST STARTS ***
+
+2016/02/26 19:33:06 --> PASSED "192.168.1.2" should be a VALID IP Address
+
+2016/02/26 19:33:08 --> PASSED "0.0.0.0" should be a VALID IP Address
+
+2016/02/26 19:33:11 --> PASSED "255.255.255.255" should be a VALID IP Address
+
+2016/02/26 19:33:14 --> PASSED "266.233.156.255" should be an INVALID IP Address
+
+2016/02/26 19:33:17 --> PASSED "125.15.15.0 0" should be an INVALID IP Address
+
+2016/02/26 19:33:19 --> PASSED "125.15.15.00.78" should be an INVALID IP Address
+
+2016/02/26 19:33:22 --> PASSED "231.123.154" should be an INVALID IP Address
+
+2016/02/26 19:33:25 --> PASSED "123.167" should be an INVALID IP Address
+
+2016/02/26 19:33:35 --> *** TEST STARTS ***
+
+2016/02/26 19:33:59 --> *** TEST STARTS ***
