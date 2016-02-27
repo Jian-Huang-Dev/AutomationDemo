@@ -5,17 +5,19 @@
 * @since   2015-07-06
 */
 
-package jian.huang.exinda.utility;
+package jian.huang.demo.utility;
 
 public class TestData {
 	
-	public static final String[] valid_ipv4_test_data = {
-		"192.168.1.2", 
+	public static final String[] VALID_IPV4_TEST_DATA = {
+		"198.168.9.8", 
 		"0.0.0.0",
-		"255.255.255.255",
+		"255.255.255.253",
 		};
 	
-	public static final String[] invalid_ipv4_test_data = {
+	public static final String[] INVALID_IPV4_TEST_DATA = {
+	    "255.255.255.255",    
+	    "192.168.1.2",    
 		"266.233.156.255",
 		"125.15.15.0 0",
 		"125.15.15.00.78",
