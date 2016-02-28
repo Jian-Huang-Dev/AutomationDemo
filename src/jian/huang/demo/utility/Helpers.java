@@ -96,39 +96,63 @@ public class Helpers {
     /**
      * Update the report summary
      * 
-     * @param timeStart
+     * @param testGroupTimeStart
      */
-    public static void testsSummary(long timeStart) {
-     // Test summary
+    public static void testsSummary(long testGroupTimeStart) {
+        // Test summary
         appendText("* Total Tests: " + totalTests + 
                 ", * Total Failed Tests: " + totalFailedTests);
-
-        // end of the test
-        timeEnd(timeStart);
+        
+        // ending time of the test group
+        testGroupTimeEnd(testGroupTimeStart);
+    }
+    
+    /**
+     * Return the starting time of the test group
+     * 
+     * @return The start time of the test
+     */
+    public static long testGroupTimeStart() {
+        long time_start = System.currentTimeMillis();
+        appendText("*** TEST GROUP STARTS ***");
+        return time_start;
     }
 
 	/**
 	 * Return the starting time of the test
 	 * 
-	 * @return The start of the test
+	 * @return The start time of the test
 	 */
-	public static long timeStart() {
+	public static long testTimeStart() {
 		long time_start = System.currentTimeMillis();
 		appendText("*** TEST STARTS ***");
 		return time_start;
 	}
+	
+	/**
+     * Return the ending time of the test group, and total execution time
+     * 
+     * @param testGroupTimeStart
+     */
+    public static void testGroupTimeEnd(long testGroupTimeStart) {
+        long timeEnd = System.currentTimeMillis();
+        long timeDuration = (timeEnd - testGroupTimeStart) / 1000;
+        appendText(
+                "TEST GROUP ENDS at: " + currentDateTime() + " --> Total Time Duration: " + 
+                        String.valueOf(timeDuration) + " s");
+    }
 
     /**
-     * An indication of the ending time of the test, and execution time
+     * Return the ending time of the test, and execution time
      * 
-     * @param time_start
+     * @param testTimeStart
      */
-    public static void timeEnd(long time_start) {
-        long time_end = System.currentTimeMillis();
-        long time_duration = (time_end - time_start) / 1000;
+    public static void testTimeEnd(long testTimeStart) {
+        long timeEnd = System.currentTimeMillis();
+        long timeDuration = (timeEnd - testTimeStart) / 1000;
         appendText(
-                "Test ends at: " + currentDateTime() + " --> Time Duration: " + 
-                        String.valueOf(time_duration) + " s");
+                "TEST ENDS at: " + currentDateTime() + " --> Time Duration: " + 
+                        String.valueOf(timeDuration) + " s");
     }
 
 	/**

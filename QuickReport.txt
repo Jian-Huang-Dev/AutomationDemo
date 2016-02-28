@@ -1,36 +1,42 @@
 
-2016/02/28 13:28:49 --> *** TEST STARTS ***
+2016/02/28 14:01:53 --> *** TEST GROUP STARTS ***
 
-2016/02/28 13:28:54 --> PASSED, "198.168.9.8" is a VALID IP Address
+2016/02/28 14:01:53 --> *** TEST STARTS ***
 
-2016/02/28 13:28:58 --> PASSED, "0.0.0.0" is a VALID IP Address
+2016/02/28 14:01:57 --> PASSED, "198.168.9.8" is a VALID IP Address
 
-2016/02/28 13:29:01 --> PASSED, "255.255.255.253" is a VALID IP Address
+2016/02/28 14:02:01 --> PASSED, "0.0.0.0" is a VALID IP Address
 
-2016/02/28 13:29:01 --> *** TEST STARTS ***
+2016/02/28 14:02:05 --> PASSED, "255.255.255.253" is a VALID IP Address
 
-2016/02/28 13:29:05 --> PASSED, "255.255.255.255" is an INVALID IP Address
+2016/02/28 14:02:09 --> FAILED, "255.255.255.255" should be a VALID IP Address
 
-2016/02/28 13:29:08 --> PASSED, "192.168.1.2" is an INVALID IP Address
+2016/02/28 14:02:09 --> TEST ENDS at: 2016/02/28 14:02:09 --> Time Duration: 16 s
 
-2016/02/28 13:29:12 --> PASSED, "266.233.156.255" is an INVALID IP Address
+2016/02/28 14:02:09 --> *** TEST STARTS ***
 
-2016/02/28 13:29:15 --> PASSED, "125.15.15.0 0" is an INVALID IP Address
+2016/02/28 14:02:13 --> PASSED, "192.168.1.2" is an INVALID IP Address
 
-2016/02/28 13:29:19 --> PASSED, "125.15.15.00.78" is an INVALID IP Address
+2016/02/28 14:02:16 --> PASSED, "266.233.156.255" is an INVALID IP Address
 
-2016/02/28 13:29:22 --> PASSED, "231.123.154" is an INVALID IP Address
+2016/02/28 14:02:20 --> PASSED, "125.15.15.0 0" is an INVALID IP Address
 
-2016/02/28 13:29:25 --> PASSED, "123.167" is an INVALID IP Address
+2016/02/28 14:02:23 --> PASSED, "125.15.15.00.78" is an INVALID IP Address
 
-2016/02/28 13:29:29 --> PASSED, "2" is an INVALID IP Address
+2016/02/28 14:02:27 --> PASSED, "231.123.154" is an INVALID IP Address
 
-2016/02/28 13:29:33 --> PASSED, "12" is an INVALID IP Address
+2016/02/28 14:02:30 --> PASSED, "123.167" is an INVALID IP Address
 
-2016/02/28 13:29:36 --> PASSED, "126" is an INVALID IP Address
+2016/02/28 14:02:33 --> PASSED, "2" is an INVALID IP Address
 
-2016/02/28 13:29:39 --> PASSED, "1265" is an INVALID IP Address
+2016/02/28 14:02:37 --> PASSED, "12" is an INVALID IP Address
 
-2016/02/28 13:29:39 --> * Total Tests: 14, * Total Failed Tests: 0
+2016/02/28 14:02:40 --> PASSED, "126" is an INVALID IP Address
 
-2016/02/28 13:29:39 --> Test ends at: 2016/02/28 13:29:39 --> Time Duration: 38 s
+2016/02/28 14:02:44 --> PASSED, "1265" is an INVALID IP Address
+
+2016/02/28 14:02:44 --> TEST ENDS at: 2016/02/28 14:02:44 --> Time Duration: 34 s
+
+2016/02/28 14:02:44 --> * Total Tests: 14, * Total Failed Tests: 1
+
+2016/02/28 14:02:44 --> TEST GROUP ENDS at: 2016/02/28 14:02:44 --> Total Time Duration: 51 s

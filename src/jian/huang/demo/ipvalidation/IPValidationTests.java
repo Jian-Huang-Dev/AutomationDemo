@@ -21,18 +21,20 @@ public class IPValidationTests {
 
     boolean isIPValid;
     String IPAddr; // IP address
-    static long timeStart;
+    long testTimeStart; // start of a test
+    static long testGroupTimeStart; // start of test group
 
     @BeforeClass
     public static void setUp() {
         // delete contents inside the file
         Helpers.eraseFileContents();
+        testGroupTimeStart = Helpers.testGroupTimeStart();
     }
     
     @Before
-    public void beforeStartOfTests() {
-        // record the time for starting of the test
-        timeStart = Helpers.timeStart();
+    public void beforeStartOfTest() {
+        // starting of the test
+        testTimeStart = Helpers.testTimeStart();
     }
 
     @Test
@@ -62,13 +64,13 @@ public class IPValidationTests {
     }
 
     @After
-    public void endOfTests() {
-        //TODO
+    public void endOfTest() {
+        Helpers.testTimeEnd(testTimeStart);
     }
     
     @AfterClass
     public static void tearDown() {
-     // Test summary and record end-time
-        Helpers.testsSummary(timeStart);
+        // Test summary
+        Helpers.testsSummary(testGroupTimeStart);
     }
 }

@@ -16,13 +16,13 @@ public class TestData {
 		"198.168.9.8", 
 		"0.0.0.0",
 		"255.255.255.253",
+		"255.255.255.255",
 		};
 	
 	/**
 	 * Invalid IPv4 test cases
 	 */
-	public static final String[] INVALID_IPV4_TEST_DATA = {
-	    "255.255.255.255",    
+	public static final String[] INVALID_IPV4_TEST_DATA = {    
 	    "192.168.1.2",    
 		"266.233.156.255",
 		"125.15.15.0 0",
