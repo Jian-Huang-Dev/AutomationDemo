@@ -2,7 +2,7 @@
  * IP validation function implementations 
  *
  * @author  Jian Huang
- * @since   2015-07-06
+ * @since   2016-02-26
  */
 
 package jian.huang.demo.ipvalidation;
@@ -16,32 +16,36 @@ import jian.huang.demo.utility.Helpers;
 
 public class IPValidation {
 
-	/**
-	 * To validate any type of IP address, including IPv4 and IPv6
-	 * 
-	 * @param IPAddr
-	 * @throws InterruptedException
-	 */
-	public static boolean ValidateIPAddr(String IPAddr)
-			throws InterruptedException {
-	    
-		// variables initialization
-		boolean isIPValid = false;
-		WebElement IPInputBox = null;
-		WebDriver driver = null;
-		IPValidatorPage validatorPage = null;
+    /**
+     * To validate any a IP address
+     * 
+     * @param IPAddr
+     * @throws InterruptedException
+     */
+    public static boolean ValidateIPAddr(String IPAddr) throws InterruptedException {
+        
+        // variables initialization
+        boolean isIPValid = false;
+        WebElement IPInputBox = null;
+        WebDriver driver = null;
+        IPValidatorPage validatorPage = null;
 
-		driver = Helpers.getChromeDriver();
-		validatorPage = new IPValidatorPage(driver);
-		IPInputBox = validatorPage.IPInputBox();
-		
-		IPInputBox.clear();
-		IPInputBox.sendKeys(IPAddr);
-		IPInputBox.sendKeys(Keys.ENTER);
-		isIPValid = validatorPage.isTestFailed();
-		driver.quit();
+        driver = Helpers.getChromeDriver(); // Chrome driver
+        validatorPage = new IPValidatorPage(driver); // get the page object
+        IPInputBox = validatorPage.IPInputBox(); // find the input box element
 
-		// return the validation result
-		return isIPValid;
-	}
+        // enter the IP address provided into the text box
+        IPInputBox.clear();
+        IPInputBox.sendKeys(IPAddr);
+        IPInputBox.sendKeys(Keys.ENTER);
+        
+        // validation
+        isIPValid = validatorPage.isTestFailed(); 
+
+        // quit driver once finished
+        driver.quit();
+
+        // return the validation result
+        return isIPValid;
+    }
 }

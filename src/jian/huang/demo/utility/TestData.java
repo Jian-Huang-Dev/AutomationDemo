@@ -2,19 +2,25 @@
 * Test Data 
 *
 * @author  Jian Huang
-* @since   2015-07-06
+* @since   2015-02-26
 */
 
 package jian.huang.demo.utility;
 
 public class TestData {
 	
+    /**
+     * Valid IPv4 test cases
+     */
 	public static final String[] VALID_IPV4_TEST_DATA = {
 		"198.168.9.8", 
 		"0.0.0.0",
 		"255.255.255.253",
 		};
 	
+	/**
+	 * Invalid IPv4 test cases
+	 */
 	public static final String[] INVALID_IPV4_TEST_DATA = {
 	    "255.255.255.255",    
 	    "192.168.1.2",    
@@ -29,12 +35,18 @@ public class TestData {
 		"1265",
 		};
 	
+	/**
+	 * Valid IPv6 test cases
+	 */
 	public static final String[] valid_ipv6_test_data = {
 		"fe80:aa67:fcd6:aa23:b4b2:a8ff:fee6:ffa7",
 		"Fe99::9",
 		"::"
 		};
 	
+	/**
+	 * Invalid IPv6 test cases
+	 */
 	public static final String[] invalid_ipv6_test_data = {
 		"fe80:aa67:fcd6:aa23:b4b2:a8ff:fee6:ffa70", 
 		"fe80:aa67:fcd6:aa23:b4b2:a8ff:fee6:ff a7",
