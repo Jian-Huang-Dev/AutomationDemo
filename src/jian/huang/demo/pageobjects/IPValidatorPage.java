@@ -1,5 +1,5 @@
 /**
- * IP validator page object 
+ * IP validator web-page
  *
  * @author  Jian Huang
  * @since   2016-02-26
@@ -25,8 +25,8 @@ public class IPValidatorPage {
      * @param driver
      */
     public IPValidatorPage(WebDriver driver) {
-        // open up the IP Address Validator program webpage
         this.driver = driver;
+        // open up the IP Address Validator program webpage
         driver.get(Constants.IP_ADDR_VALIDATOR_PAGE);
     }
 
@@ -48,31 +48,5 @@ public class IPValidatorPage {
         }
 
         return inputBox;
-    }
-
-    /**
-     * Boolean function to check if the test failed
-     * 
-     * @return
-     */
-    public boolean isTestFailed() {
-        String result = "";
-        boolean isValid = false;
-
-        try {
-            result = driver.findElement(By.
-                    cssSelector(".result_desc > span")).getText();
-        } catch (NoSuchElementException e) {
-            // quit driver if an exception thrown
-            Helpers.updateReportWithException(e);
-            driver.quit();
-        }
-
-        // it is a valid test if the criteria met
-        if (result.equals(Constants.VALID)) {
-            isValid = true;
-        }
-
-        return isValid;
     }
 }

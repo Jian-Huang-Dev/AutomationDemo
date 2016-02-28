@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import jian.huang.demo.pageobjects.IPValidatorPage;
+import jian.huang.demo.pageobjects.ResultPage;
 import jian.huang.demo.utility.Helpers;
 
 public class IPValidation {
@@ -40,7 +41,8 @@ public class IPValidation {
         IPInputBox.sendKeys(Keys.ENTER);
         
         // validation
-        isIPValid = validatorPage.isTestFailed(); 
+        ResultPage resultPage = new ResultPage(driver);
+        isIPValid = resultPage.isTestFailed(); 
 
         // quit driver once finished
         driver.quit();
