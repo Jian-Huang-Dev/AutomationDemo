@@ -110,22 +110,24 @@ public class Helpers {
     /**
      * Return the starting time of the test group
      * 
+     * @param className
      * @return The start time of the test
      */
-    public static long testGroupTimeStart() {
+    public static long testGroupTimeStart(String className) {
         long time_start = System.currentTimeMillis();
-        appendText("*** TEST GROUP STARTS ***");
+        appendText("*** TEST GROUP " + className + " STARTS ***");
         return time_start;
     }
 
 	/**
 	 * Return the starting time of the test
 	 * 
+	 * @param methodName
 	 * @return The start time of the test
 	 */
-	public static long testTimeStart() {
+	public static long testTimeStart(String methodName) {
 		long time_start = System.currentTimeMillis();
-		appendText("*** TEST STARTS ***");
+		appendText("*** TEST " + methodName + " STARTS ***");
 		return time_start;
 	}
 	
@@ -138,21 +140,23 @@ public class Helpers {
         long timeEnd = System.currentTimeMillis();
         long timeDuration = (timeEnd - testGroupTimeStart) / 1000;
         appendText(
-                "TEST GROUP ENDS at: " + currentDateTime() + " --> Total Time Duration: " + 
-                        String.valueOf(timeDuration) + " s");
+                "TEST GROUP ENDS at: " + currentDateTime() + 
+                " --> Total Time Duration: " + 
+                String.valueOf(timeDuration) + " s");
     }
 
     /**
      * Return the ending time of the test, and execution time
      * 
      * @param testTimeStart
+     * @param methodName
      */
-    public static void testTimeEnd(long testTimeStart) {
+    public static void testTimeEnd(long testTimeStart, String methodName) {
         long timeEnd = System.currentTimeMillis();
         long timeDuration = (timeEnd - testTimeStart) / 1000;
         appendText(
-                "TEST ENDS at: " + currentDateTime() + " --> Time Duration: " + 
-                        String.valueOf(timeDuration) + " s");
+                "TEST " + methodName + " ENDS at: " + currentDateTime() + 
+                " --> Time Duration: " + String.valueOf(timeDuration) + " s");
     }
 
 	/**

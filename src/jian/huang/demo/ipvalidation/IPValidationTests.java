@@ -12,7 +12,9 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestName;
 
 import jian.huang.demo.utility.Helpers;
 import jian.huang.demo.utility.TestData;
@@ -23,18 +25,22 @@ public class IPValidationTests {
     String IPAddr; // IP address
     long testTimeStart; // start of a test
     static long testGroupTimeStart; // start of test group
+    static String className = IPValidationTests.class.getSimpleName(); // class name
 
     @BeforeClass
     public static void setUp() {
         // delete contents inside the file
         Helpers.eraseFileContents();
-        testGroupTimeStart = Helpers.testGroupTimeStart();
+        testGroupTimeStart = Helpers.testGroupTimeStart(className);
     }
+    
+    @Rule 
+    public TestName name = new TestName();
     
     @Before
     public void beforeStartOfTest() {
         // starting of the test
-        testTimeStart = Helpers.testTimeStart();
+        testTimeStart = Helpers.testTimeStart(name.getMethodName());
     }
 
     @Test
@@ -65,7 +71,7 @@ public class IPValidationTests {
 
     @After
     public void endOfTest() {
-        Helpers.testTimeEnd(testTimeStart);
+        Helpers.testTimeEnd(testTimeStart, name.getMethodName());
     }
     
     @AfterClass
